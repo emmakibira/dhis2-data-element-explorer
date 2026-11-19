@@ -15,6 +15,6 @@
 
 - [ ] Branch name follows git flow (`feature/*`, `release/*`, `hotfix/*`)
 - [ ] Targets the right base branch (`develop` for features, `main` for release/hotfix)
-- [ ] `yarn lint`, `yarn test` and `yarn build` pass
+- [ ] `pnpm lint`, `pnpm test` and `pnpm build` pass
 - [ ] No `any` / `@ts-ignore`
 - [ ] Commit messages follow Conventional Commits
