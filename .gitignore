@@ -6,3 +6,5 @@ build/
 *.log
 .DS_Store
 coverage/
+# DHIS2 Platform
+src/locales
