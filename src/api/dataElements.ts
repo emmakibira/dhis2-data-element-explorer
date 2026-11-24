@@ -10,8 +10,11 @@ export interface DataElementsVariables {
 export const dataElementsQuery = {
     dataElements: {
         resource: 'dataElements',
-        params: ({ page }: DataElementsVariables) => ({
-            page,
+        params: (variables: object) => ({
+            page:
+                'page' in variables && typeof variables.page === 'number'
+                    ? variables.page
+                    : 1,
             pageSize: PAGE_SIZE,
             fields: 'id,displayName,valueType,domainType',
             order: 'displayName:asc',
