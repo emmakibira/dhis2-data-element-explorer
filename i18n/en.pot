@@ -5,11 +5,26 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2026-11-19T11:59:41.111Z\n"
-"PO-Revision-Date: 2026-11-19T11:59:41.111Z\n"
+"POT-Creation-Date: 2026-11-24T08:16:45.636Z\n"
+"PO-Revision-Date: 2026-11-24T08:16:45.642Z\n"
 
 msgid "Data Element Explorer"
 msgstr "Data Element Explorer"
+
+msgid "Unable to load data elements"
+msgstr "Unable to load data elements"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Value type"
+msgstr "Value type"
+
+msgid "Domain type"
+msgstr "Domain type"
+
+msgid "No data elements found"
+msgstr "No data elements found"
 
 msgctxt "Application title"
 msgid "__MANIFEST_APP_TITLE"
