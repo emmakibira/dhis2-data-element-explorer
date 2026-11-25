@@ -46,3 +46,19 @@ export const dataElementsQuery = {
         },
     },
 }
+
+export const dataElementDetailsQuery = {
+    dataElement: {
+        resource: 'dataElements',
+        id: (variables: object) => {
+            if ('id' in variables && typeof variables.id === 'string') {
+                return variables.id
+            }
+
+            throw new Error('A data element ID is required')
+        },
+        params: {
+            fields: 'id,name,shortName,code,description,valueType,aggregationType,categoryCombo[name],created,lastUpdated',
+        },
+    },
+}
