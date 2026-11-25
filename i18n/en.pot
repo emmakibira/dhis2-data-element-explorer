@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2026-11-25T08:48:36.524Z\n"
-"PO-Revision-Date: 2026-11-25T08:48:36.526Z\n"
+"POT-Creation-Date: 2026-11-25T11:40:50.684Z\n"
+"PO-Revision-Date: 2026-11-25T11:40:50.686Z\n"
 
 msgid "Data Element Explorer"
 msgstr "Data Element Explorer"
@@ -14,14 +14,50 @@ msgstr "Data Element Explorer"
 msgid "Unable to load data elements"
 msgstr "Unable to load data elements"
 
+msgid "Name"
+msgstr "Name"
+
+msgid "Short name"
+msgstr "Short name"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Value type"
+msgstr "Value type"
+
+msgid "Aggregation type"
+msgstr "Aggregation type"
+
+msgid "Category combination"
+msgstr "Category combination"
+
+msgid "Created"
+msgstr "Created"
+
+msgid "Last updated"
+msgstr "Last updated"
+
+msgid "Data element details"
+msgstr "Data element details"
+
+msgid "Unable to load data element details"
+msgstr "Unable to load data element details"
+
+msgid "No details were returned"
+msgstr "No details were returned"
+
+msgid "Close"
+msgstr "Close"
+
 msgid "Search by name"
 msgstr "Search by name"
 
 msgid "Search data elements..."
 msgstr "Search data elements..."
-
-msgid "Value type"
-msgstr "Value type"
 
 msgid "All"
 msgstr "All"
@@ -40,9 +76,6 @@ msgstr "BOOLEAN"
 
 msgid "DATE"
 msgstr "DATE"
-
-msgid "Name"
-msgstr "Name"
 
 msgid "Domain type"
 msgstr "Domain type"

@@ -1,12 +1,15 @@
 import i18n from '@dhis2/d2-i18n'
 import { CircularLoader, NoticeBox, Pagination } from '@dhis2/ui'
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
+import { DataElementDetailsModal } from './components/DataElementDetailsModal'
 import { DataElementFilters } from './components/DataElementFilters'
 import { DataElementsTable } from './components/DataElementsTable'
 import { useDataElements } from './hooks/useDataElements'
 import classes from '@/App.module.css'
 
 const App: FC = () => {
+    const [selectedId, setSelectedId] = useState<string | null>(null)
+
     const {
         dataElements,
         pager,
@@ -39,7 +42,10 @@ const App: FC = () => {
                 </NoticeBox>
             ) : (
                 <>
-                    <DataElementsTable dataElements={dataElements} />
+                    <DataElementsTable
+                        dataElements={dataElements}
+                        onSelect={setSelectedId}
+                    />
 
                     {pager && pager.pageCount > 0 && (
                         <Pagination
@@ -52,6 +58,14 @@ const App: FC = () => {
                         />
                     )}
                 </>
+            )}
+
+            {selectedId !== null && (
+                <DataElementDetailsModal
+                    key={selectedId}
+                    id={selectedId}
+                    onClose={() => setSelectedId(null)}
+                />
             )}
         </div>
     )

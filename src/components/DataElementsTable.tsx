@@ -1,5 +1,6 @@
 import i18n from '@dhis2/d2-i18n'
 import {
+    Button,
     DataTable,
     DataTableHead,
     DataTableBody,
@@ -12,9 +13,13 @@ import type { DataElement } from '../types/dataElement'
 
 interface DataElementsTableProps {
     dataElements: DataElement[]
+    onSelect: (id: string) => void
 }
 
-export function DataElementsTable({ dataElements }: DataElementsTableProps) {
+export function DataElementsTable({
+    dataElements,
+    onSelect,
+}: DataElementsTableProps) {
     return (
         <DataTable>
             <DataTableHead>
@@ -41,9 +46,24 @@ export function DataElementsTable({ dataElements }: DataElementsTableProps) {
                 ) : (
                     dataElements.map((element) => (
                         <DataTableRow key={element.id}>
-                            <DataTableCell>{element.displayName}</DataTableCell>
-                            <DataTableCell>{element.valueType}</DataTableCell>
-                            <DataTableCell>{element.domainType}</DataTableCell>
+                            <DataTableCell onClick={() => onSelect(element.id)}>
+                                <Button
+                                    small
+                                    secondary
+                                    onClick={(_, event) => {
+                                        event?.stopPropagation()
+                                        onSelect(element.id)
+                                    }}
+                                >
+                                    {element.displayName}
+                                </Button>
+                            </DataTableCell>
+                            <DataTableCell onClick={() => onSelect(element.id)}>
+                                {element.valueType}
+                            </DataTableCell>
+                            <DataTableCell onClick={() => onSelect(element.id)}>
+                                {element.domainType}
+                            </DataTableCell>
                         </DataTableRow>
                     ))
                 )}
