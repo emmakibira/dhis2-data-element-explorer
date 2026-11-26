@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2026-11-25T11:40:50.684Z\n"
-"PO-Revision-Date: 2026-11-25T11:40:50.686Z\n"
+"POT-Creation-Date: 2026-11-26T07:21:51.407Z\n"
+"PO-Revision-Date: 2026-11-26T07:21:51.407Z\n"
 
 msgid "Data Element Explorer"
 msgstr "Data Element Explorer"
@@ -77,11 +77,50 @@ msgstr "BOOLEAN"
 msgid "DATE"
 msgstr "DATE"
 
+msgid "Notes"
+msgstr "Notes"
+
+msgid "Unable to load note"
+msgstr "Unable to load note"
+
+msgid "Data element note"
+msgstr "Data element note"
+
+msgid "Write a note here..."
+msgstr "Write a note here..."
+
+msgid "Delete note?"
+msgstr "Delete note?"
+
+msgid "Are you sure you want to delete this note?"
+msgstr "Are you sure you want to delete this note?"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Confirm delete"
+msgstr "Confirm delete"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Save"
+msgstr "Save"
+
 msgid "Domain type"
 msgstr "Domain type"
 
 msgid "No data elements found"
 msgstr "No data elements found"
+
+msgid "Note saved successfully"
+msgstr "Note saved successfully"
+
+msgid "Note deleted successfully"
+msgstr "Note deleted successfully"
+
+msgid "Unable to complete the note request"
+msgstr "Unable to complete the note request"
 
 msgctxt "Application title"
 msgid "__MANIFEST_APP_TITLE"

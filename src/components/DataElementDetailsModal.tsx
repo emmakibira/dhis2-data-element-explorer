@@ -11,6 +11,7 @@ import {
 } from '@dhis2/ui'
 import React from 'react'
 import { useDataElementDetails } from '../hooks/useDataElementDetails'
+import { DataElementNote } from './DataElementNote'
 
 interface DataElementDetailsModalProps {
     id: string
@@ -84,28 +85,32 @@ export function DataElementDetailsModal({
                         {error?.message ?? i18n.t('No details were returned')}
                     </NoticeBox>
                 ) : (
-                    <dl
-                        style={{
-                            display: 'grid',
-                            gridTemplateColumns: '1fr 2fr',
-                            gap: '16px',
-                            margin: 0,
-                        }}
-                    >
-                        {fields.map(({ label, value }) => (
-                            <React.Fragment key={label}>
-                                <dt style={{ fontWeight: 600 }}>{label}</dt>
-                                <dd
-                                    style={{
-                                        margin: 0,
-                                        overflowWrap: 'anywhere',
-                                    }}
-                                >
-                                    {value?.trim() || '—'}
-                                </dd>
-                            </React.Fragment>
-                        ))}
-                    </dl>
+                    <>
+                        <dl
+                            style={{
+                                display: 'grid',
+                                gridTemplateColumns: '1fr 2fr',
+                                gap: '16px',
+                                margin: 0,
+                            }}
+                        >
+                            {fields.map(({ label, value }) => (
+                                <React.Fragment key={label}>
+                                    <dt style={{ fontWeight: 600 }}>{label}</dt>
+                                    <dd
+                                        style={{
+                                            margin: 0,
+                                            overflowWrap: 'anywhere',
+                                        }}
+                                    >
+                                        {value?.trim() || '—'}
+                                    </dd>
+                                </React.Fragment>
+                            ))}
+                        </dl>
+
+                        <DataElementNote key={id} id={id} />
+                    </>
                 )}
             </ModalContent>
 
