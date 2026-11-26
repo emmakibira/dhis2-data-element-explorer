@@ -21,3 +21,22 @@ export interface DataElementsResponse {
         dataElements: DataElement[]
     }
 }
+
+export interface DataElementDetails {
+    id: string
+    name?: string | null
+    shortName?: string | null
+    code?: string | null
+    description?: string | null
+    valueType?: string | null
+    aggregationType?: string | null
+    categoryCombo?: {
+        name?: string | null
+    } | null
+    created?: string | null
+    lastUpdated?: string | null
+}
+
+export interface DataElementDetailsResponse {
+    dataElement: DataElementDetails
+}
