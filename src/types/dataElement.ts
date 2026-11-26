@@ -40,3 +40,11 @@ export interface DataElementDetails {
 export interface DataElementDetailsResponse {
     dataElement: DataElementDetails
 }
+export interface DataElementNote {
+    text: string
+    updatedAt: string
+}
+
+export interface DataElementNoteResponse {
+    note: DataElementNote
+}
